@@ -32,7 +32,7 @@
   $sums_of_array = [];
   $pw_result = [];
   $pw_string = "";
-  $response = false;
+  $response = "";
 
   $pw_length = intval($_GET["pw_length"]);
 
@@ -45,7 +45,7 @@
 
       session_start();
 
-      $_SESSION['psw'] = $_GET[$pw_string];
+      $_SESSION['psw'] = $pw_string;
 
       header('Location: ./landing-page.php');
 
@@ -115,7 +115,16 @@
           
         </div>
         <div class="card-footer text-muted">
-          <p><?php echo $response ? "$pw_string" : "Inserisci una lunghezza corretta" ?></p>
+          <p>
+            <?php 
+            /*if(empty($pw_string)&&(!$response)){
+              echo 'Inserisci la lunghezza.';
+            }elseif(!empty($pw_string)&&!$response){
+              
+              echo 'Inserisci una lunghezza corretta';
+            }*/
+            ?>
+            </p>
         </div>
       </div>
 
