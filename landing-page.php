@@ -7,14 +7,14 @@
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
 
-  <title>Strong Password Generetor 2000, result</title>
+  <title>Strong Password Generator 2000, result</title>
 </head>
 <body>
   <?php
 
   session_start();
   var_dump($_SESSION);
-  
+
   ?>
   <div class="container mt-5">
 
