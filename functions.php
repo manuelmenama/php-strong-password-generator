@@ -50,9 +50,6 @@ if(!empty($pw_length)){
 
 }
 
-
-var_dump($pw_result);
-
 echo implode("",$pw_result);
 
 $pw_string = implode("",$pw_result);
