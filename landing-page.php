@@ -29,6 +29,7 @@
             <li class="list-group-item"><?php echo $_SESSION["psw"]; ?></li>
           </ul>
         </div>
+        <a href="./index.php" class="btn btn-info">Torna alla homepage</a>
 
       </div>
 

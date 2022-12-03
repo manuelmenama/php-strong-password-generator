@@ -32,7 +32,10 @@
   $sums_of_array = [];
   $pw_result = [];
   $pw_string = "";
-  $response = "";
+  $class_string = "bg-warning";
+
+  $char_repeat = $_GET["char_repeat"];
+  $type_of_char = $_GET["type_of_char"];
 
   $pw_length = intval($_GET["pw_length"]);
 
@@ -98,14 +101,63 @@
               <div class="col-4 d-flex align-items-center">
                 <p>Numero di caratteri:</p>
               </div>
-              <div class="col-4 offset-4">
+              <div class="col-4 offset-4 border-bottom pb-3">
 
                 <input type="number" class="form-control" placeholder="" aria-label="number-of-char" name="pw_length">
 
               </div>
+              <div class="col-4 d-flex align-items-center mt-3">
+
+                <p>Ripetizione dei caratteri:</p>
+
+              </div>
+
+              <div class="col-4 offset-4 mt-3 border-bottom pb-3">
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="char_repeat" id="char_repeat1" value="1" checked>
+                  <label class="form-check-label" for="char_repeat1">
+                    Sì
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="char_repeat" id="char_repeat2" value="">
+                  <label class="form-check-label" for="char_repeat2">
+                    No
+                  </label>
+                </div>
+
+              </div>
+              <div class="col-4 d-flex align-items-center mt-3">
+                <p>Opzioni avanzate:</p>
+              </div>
+
+              <div class="col-4 offset-4 mt-3">
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="type_of_char[]" value="symbol" id="flexCheckDefault" checked>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Simboli
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="type_of_char[]" value="number" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Numeri
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="type_of_char[]" value="letter" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Lettere
+                  </label>
+                </div>
+
+              </div>
+              
               <div class="col-2">
 
-                <button type="submit" class="btn btn-primary">GENERA</button>
+                <button type="submit" class="btn btn-primary mt-5">GENERA</button>
 
               </div>
 
@@ -114,18 +166,21 @@
           </div>
           
         </div>
-        <div class="card-footer text-muted">
+        <?php if(isset($response)&&!$response): ?>
+        <div class="card-footer text-muted bg-warning pt-4" style="--bs-bg-opacity: .2;">
           <p>
-            <?php 
-            /*if(empty($pw_string)&&(!$response)){
-              echo 'Inserisci la lunghezza.';
-            }elseif(!empty($pw_string)&&!$response){
-              
-              echo 'Inserisci una lunghezza corretta';
-            }*/
-            ?>
-            </p>
+            Inserisci un numero corretto di caratteri!
+          </p>
         </div>
+        <?php else: ?>
+
+          <div class="card-footer text-muted pt-4">
+            <p>
+              Is always better have a Strong Password!
+            </p>
+          </div>
+
+        <?php endif; ?>
       </div>
 
       </div>
