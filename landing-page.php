@@ -14,6 +14,7 @@
 
   session_start();
   var_dump($_SESSION);
+  $pw_result = [];
 
   ?>
   <div class="container mt-5">

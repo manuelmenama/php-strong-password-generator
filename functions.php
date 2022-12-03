@@ -13,7 +13,7 @@ foreach($type_of_char as $type){
   if($type==="number"){
     $sums_of_array = array_merge($sums_of_array, $numbers);
     if((!in_array("letter", $type_of_char))&&(!in_array("symbol", $type_of_char))){
-      $pw_length = 9;
+      $pw_length = 10;
     }
   }
   if($type==="letter"){
@@ -42,7 +42,6 @@ if(!empty($pw_length)){
         $pw_result[] = $sums_of_array[$random_index];
       }
     }while(count($pw_result) < $pw_length);
-    
     
   }else{
     $response = false;
