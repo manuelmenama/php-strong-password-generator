@@ -1,9 +1,5 @@
 <?php
 
-var_dump($_GET["pw_length"]);
-var_dump($_GET["char_repeat"]);
-var_dump($type_of_char);
-
 function is_char_repeat($char_repeat){
   return ($char_repeat==="1")?true:false;
 }
@@ -25,11 +21,6 @@ foreach($type_of_char as $type){
   }
   
 }
-
-
-
-var_dump($sums_of_array);
-
 
 if(!empty($pw_length)){
 

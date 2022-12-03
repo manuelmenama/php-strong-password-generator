@@ -14,6 +14,7 @@
 
   session_start();
   var_dump($_SESSION);
+  
   ?>
   <div class="container mt-5">
 
@@ -29,7 +30,7 @@
             <li class="list-group-item"><?php echo $_SESSION["psw"]; ?></li>
           </ul>
         </div>
-        <a href="./index.php" class="btn btn-info">Torna alla homepage</a>
+        <a href="./index.php" class="btn btn-info mt-3">Torna alla homepage</a>
 
       </div>
 

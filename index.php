@@ -167,7 +167,7 @@
           
         </div>
         <?php if(isset($response)&&!$response): ?>
-        <div class="card-footer text-muted bg-warning pt-4" style="--bs-bg-opacity: .2;">
+        <div class="card-footer text-muted bg-warning pt-4" style="--bs-bg-opacity: .5;">
           <p>
             Inserisci un numero corretto di caratteri!
           </p>
