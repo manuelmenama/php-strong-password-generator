@@ -28,7 +28,7 @@
             <h3>Your strong password:</h3>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><?php echo $_SESSION["psw"]; ?></li>
+            <li class="list-group-item"><?php echo htmlspecialchars($_SESSION["psw"]); ?></li>
           </ul>
         </div>
         <a href="./index.php" class="btn btn-info mt-3">Torna alla homepage</a>
